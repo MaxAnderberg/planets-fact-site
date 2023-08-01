@@ -15,9 +15,9 @@ export default function EarthPage() {
             covered with water. Earth's distance from the Sun, physical properties
             and geological history have allowed life to evolve and thrive.
             <section>
-            <p>
-              source: <Link href='www.google.se' >Wikipedia</Link>
-            </p>
+              <p>
+                source: <Link href='www.google.se' >Wikipedia</Link>
+              </p>
             </section>
           </div>
           <div className='flex flex-col gap-[16px]'>
@@ -29,12 +29,12 @@ export default function EarthPage() {
 
       </section>
 
-<section className='flex gap-[30px]'>
-      <Fact title='Rotation time' fact='0.99 Days'/>
-      <Fact title='Revolution time' fact='365.26 days'/>
-      <Fact title='Radius' fact='6,371 km'/>
-      <Fact title='AVERAGE TEMP.' fact='16°c'/>
-</section>
+      <section className='flex gap-[30px]'>
+        <Fact title='Rotation time' fact='0.99 Days' />
+        <Fact title='Revolution time' fact='365.26 days' />
+        <Fact title='Radius' fact='6,371 km' />
+        <Fact title='AVERAGE TEMP.' fact='16°c' />
+      </section>
     </main>
   )
 }
