@@ -14,7 +14,6 @@ export default function EarthPage() {
             About 29.2% of Earth's surface is land with remaining 70.8% is
             covered with water. Earth's distance from the Sun, physical properties
             and geological history have allowed life to evolve and thrive.
-            
           </div>
           <p className='mb-[39px]'>
             source: <Link href='www.google.se' >Wikipedia</Link>
