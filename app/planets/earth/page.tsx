@@ -17,8 +17,8 @@ export default function EarthPage() {
             
           </div>
           <p className='mb-[39px]'>
-              source: <Link href='www.google.se' >Wikipedia</Link>
-            </p>
+            source: <Link href='www.google.se' >Wikipedia</Link>
+          </p>
           <div className='flex flex-col gap-[16px]'>
             <button className='uppercase py-[11px] border border-[#D8D8D8] max-w-[350px]'>01 overview</button>
             <button className='uppercase py-[11px] border border-[#D8D8D8] max-w-[350px]'>02 internal structure</button>
