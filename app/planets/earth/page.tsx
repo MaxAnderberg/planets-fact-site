@@ -4,7 +4,7 @@ import Fact from '@/components/Fact';
 
 export default function EarthPage() {
   return (
-    <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars items-center justify-center pr-[165px]">
+    <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars justify-center pr-[165px]">
       <section className='flex items-center justify-center mb-[142px]'>
         <img src='/planet-earth.svg' className='ml-[255px] mr-[195px]' />
         <section className='flex flex-col justify-between'>
