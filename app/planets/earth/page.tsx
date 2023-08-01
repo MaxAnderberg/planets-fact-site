@@ -36,9 +36,9 @@ export default function EarthPage() {
             source: <Link href='www.google.se' >Wikipedia</Link>
           </p>
           <div className='flex flex-col gap-[16px]'>
-            <button onClick={() => setSelectedButton(1)} className='uppercase py-[11px] border border-[#D8D8D8] max-w-[350px]'>01 overview</button>
-            <button onClick={() => setSelectedButton(2)} className='uppercase py-[11px] border border-[#D8D8D8] max-w-[350px]'>02 internal structure</button>
-            <button onClick={() => setSelectedButton(3)} className='uppercase py-[11px] border border-[#D8D8D8] max-w-[350px]'>03 surface geology</button>
+            <button onClick={() => setSelectedButton(1)} className={`uppercase py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 1 ? 'bg-[#6D2ED5] border-none' : ''}`}>01 overview</button>
+            <button onClick={() => setSelectedButton(2)} className={`uppercase py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 2 ? 'bg-[#6D2ED5] border-none' : ''}`}>02 internal structure</button>
+            <button onClick={() => setSelectedButton(3)} className={`uppercase py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 3 ? 'bg-[#6D2ED5] border-none' : ''}`}>03 surface geology</button>
           </div>
         </section>
 
