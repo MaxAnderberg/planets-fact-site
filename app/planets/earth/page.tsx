@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import './styles.css';
+import Fact from '@/components/Fact';
 
 export default function EarthPage() {
   return (
@@ -29,22 +30,10 @@ export default function EarthPage() {
       </section>
 
 <section className='flex gap-[30px]'>
-      <div className='p-[20px] border-white border-[1px] '>
-        <h1 className='uppercase text-[11px] opacity-50'>Rotation Time</h1>
-        <h2 className='uppercase text-[40px]'>0.99 Days</h2>
-      </div>
-<div>
-        <h1 className='uppercase'>Rotation Time</h1>
-        <h2 className='uppercase'>0.99 Days</h2>
-      </div>
-      <div>
-        <h1 className='uppercase'>Rotation Time</h1>
-        <h2 className='uppercase'>0.99 Days</h2>
-      </div>
-      <div>
-        <h1 className='uppercase'>Rotation Time</h1>
-        <h2 className='uppercase'>0.99 Days</h2>
-      </div>
+      <Fact title='Rotation time' fact='0.99 Days'/>
+      <Fact title='Revolution time' fact='365.26 days'/>
+      <Fact title='Radius' fact='6,371 km'/>
+      <Fact title='AVERAGE TEMP.' fact='16°c'/>
 </section>
     </main>
   )
