@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import './styles.css';
 import Fact from '@/components/Fact';
 
 export default function EarthPage() {
@@ -27,7 +26,7 @@ export default function EarthPage() {
   return (
     <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars justify-center pr-[165px]">
       <section className='flex items-center justify-center mb-[142px]'>
-        <Image src='/planet-earth.svg' className='ml-[255px] mr-[195px]' alt='image of a cartoony earth'/>
+        <Image src='/planet-earth.svg' width='450' height='450' className='ml-[255px] mr-[195px]' alt='image of a cartoony earth'/>
         <section className='flex flex-col justify-between'>
           <h1 className="text-5xl font-bold mb-[23px]">Earth</h1>
           <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex h-full flex-col mb-[24px]">
@@ -37,9 +36,9 @@ export default function EarthPage() {
             source: <Link href='www.google.se' >Wikipedia</Link>
           </p>
           <div className='flex flex-col gap-[16px]'>
-            <button onClick={() => setSelectedButton(1)} className={`uppercase py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 1 ? 'bg-[#6D2ED5] border-none' : ''} hover:bg-[#D8D8D8] hover:opacity-20`}>01 overview</button>
-            <button onClick={() => setSelectedButton(2)} className={`uppercase py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 2 ? 'bg-[#6D2ED5] border-none' : ''} hover:bg-[#D8D8D8] hover:opacity-20`}>02 internal structure</button>
-            <button onClick={() => setSelectedButton(3)} className={`uppercase py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 3 ? 'bg-[#6D2ED5] border-none' : ''} hover:bg-purple-500 hover:opacity-20`}>03 surface geology</button>
+            <button onClick={() => setSelectedButton(1)} className={`uppercase py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 1 ? 'bg-[#6D2ED5] border-none' : ''} hover:bg-[#D8D8D8] hover:bg-opacity-20`}>01 overview</button>
+            <button onClick={() => setSelectedButton(2)} className={`uppercase py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 2 ? 'bg-[#6D2ED5] border-none' : ''} hover:bg-[#D8D8D8] hover:bg-opacity-20`}>02 internal structure</button>
+            <button onClick={() => setSelectedButton(3)} className={`uppercase py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 3 ? 'bg-[#6D2ED5] border-none' : ''} hover:bg-[#D8D8D8] hover:bg-opacity-20  text-white`}>03 surface geology</button>
           </div>
         </section>
       </section>
