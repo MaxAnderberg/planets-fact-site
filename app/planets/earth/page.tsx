@@ -33,7 +33,7 @@ export default function EarthPage() {
             {planetText}
           </div>
           <p className='mb-[39px]'>
-            source: <Link href='www.google.se' >Wikipedia</Link>
+            source : <Link href='www.google.se' >Wikipedia</Link>
           </p>
           <div className='flex flex-col gap-[16px]'>
             <button onClick={() => setSelectedButton(1)} className={`uppercase py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 1 ? 'bg-[#6D2ED5] border-none' : ''} hover:bg-[#D8D8D8] hover:bg-opacity-20`}>01 overview</button>
