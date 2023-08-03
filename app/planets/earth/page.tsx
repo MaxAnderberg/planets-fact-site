@@ -37,7 +37,7 @@ export default function EarthPage() {
   }, [selectedButton])
 
   return (
-    <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars justify-center pr-[165px]">
+    <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars justify-center ">
       <section className='flex items-center justify-center mb-[142px]'>
         {showEarthGeology ? (
         <div className='relative ml-[255px] mr-[195px] w-[450px] h-[450px] overflow-visible'>
