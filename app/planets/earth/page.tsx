@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Fact from '@/components/Fact';
+import { InfoSwitchButton } from '@/components/InfoSwitchButton';
 
 export default function EarthPage() {
-  const [selectedButton, setSelectedButton] = useState(3);
+  const [selectedButton, setSelectedButton] = useState<number>(1);
   const [showEarthGeology, setDisplayGeology] = useState(false);
 
   let planetText;
@@ -55,16 +56,9 @@ export default function EarthPage() {
             source : <Link href='www.google.se' >Wikipedia</Link>
           </p>
           <div className='flex flex-col gap-[16px]'>
-            <button onClick={() => setSelectedButton(1)} className={`uppercase text-left pl-[24px] py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 1 ? 'bg-[#6D2ED5] border-none' : ''} hover:bg-[#D8D8D8] hover:bg-opacity-20`}>
-              01 overview
-            </button>
-            <button onClick={() => setSelectedButton(2)} className={`uppercase text-left pl-[24px] py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 2 ? 'bg-[#6D2ED5] border-none' : ''} hover:bg-[#D8D8D8] hover:bg-opacity-20`}>
-              02 internal structure
-            </button>
-            <button onClick={() => setSelectedButton(3)} className={`flex uppercase text-left pl-[24px] py-[11px] border border-[#D8D8D8] max-w-[350px] ${selectedButton == 3 ? 'bg-[#6D2ED5] border-none' : ''} hover:bg-[#D8D8D8] hover:bg-opacity-20  text-white`}>
-              <p>03</p>
-              <p>surface geology</p>
-            </button>
+            <InfoSwitchButton section='01' title='overview' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={1}/>
+            <InfoSwitchButton section='02' title='internal structure' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={2}/>
+            <InfoSwitchButton section='03' title='surface geology' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={3}/>
           </div>
         </section>
       </section>
