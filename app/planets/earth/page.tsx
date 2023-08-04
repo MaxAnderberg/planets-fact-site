@@ -38,18 +38,18 @@ export default function EarthPage() {
 
   return (
     <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars justify-center ">
-      <section className='flex items-center justify-center mb-[142px]'>
+      <section className='flex flex-col items-center justify-center mb-[142px] px-[24px]'>
         {showEarthGeology ? (
-        <div className='relative ml-[255px] mr-[195px] w-[450px] h-[450px] overflow-visible'>
-          <Image src={planetImage} layout="fill" objectFit="cover" className='absolute bottom-0' alt='image of a cartoony earth'/>
+        <div className='relative ml-[255px] mr-[195px] w-[173px] h-[173px] overflow-visible'>
+          <Image src={planetImage} layout="fill" objectFit="cover" className='absolute bottom-0 w-[173px]' alt='image of a cartoony earth'/>
           <Image src='/geology-earth.png' width='168' height='199' objectFit="cover" className='absolute ml-[32%] mt-[300px]' alt='image of a cartoony earth'/>
         </div>
         ) : (
-        <Image src={planetImage} width='450' height='450' className='ml-[255px] mr-[195px]' alt='image of a cartoony earth'/>
+        <Image src={planetImage} width='450' height='450' className='w-[173px]' alt='image of a cartoony earth'/>
         )}
         <section className='flex flex-col justify-between'>
-          <h1 className="text-5xl font-bold mb-[23px] font-[Antonio] uppercase">Earth</h1>
-          <div className="z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex h-full flex-col mb-[24px] font-[spartan] leading-6">
+          <h1 className="text-5xl font-bold mb-[16px] text-[40px] font-[Antonio] uppercase text-center mt-[67px]">Earth</h1>
+          <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center lg:flex h-full flex-col mb-[24px] font-[spartan] leading-6">
             {planetText}
           </div>
           <div className='mb-[39px] font-spartan flex'>
@@ -63,7 +63,7 @@ export default function EarthPage() {
         </section>
       </section>
 
-      <section className='flex gap-[30px]'>
+      <section className='flex flex-col gap-[8px]'>
         <Fact title='Rotation time' fact='0.99 Days' />
         <Fact title='Revolution time' fact='365.26 days' />
         <Fact title='Radius' fact='6,371 km' />
