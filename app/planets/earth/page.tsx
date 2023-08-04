@@ -49,12 +49,12 @@ export default function EarthPage() {
         )}  
         <section className='flex flex-col justify-between'>
           <h1 className="text-5xl font-bold mb-[23px] font-[Antonio] uppercase">Earth</h1>
-          <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex h-full flex-col mb-[24px]">
+          <div className="z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex h-full flex-col mb-[24px] font-[spartan] leading-6">
             {planetText}
           </div>
-          <p className='mb-[39px]'>
-            source : <Link href='www.google.se' className='underline font-bold text-[#838391]' >Wikipedia</Link>
-          </p>
+          <div className='mb-[39px] font-spartan flex'>
+            <p className='opacity-50'>source :&nbsp;</p><Link href='www.google.se' className='underline font-bold text-[#838391]'>Wikipedia</Link>
+          </div>
           <div className='flex flex-col gap-[16px]'>
             <InfoSwitchButton section='01' title='overview' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={1}/>
             <InfoSwitchButton section='02' title='internal structure' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={2}/>
