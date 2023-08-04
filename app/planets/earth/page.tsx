@@ -37,7 +37,7 @@ export default function EarthPage() {
   }, [selectedButton])
 
   return (
-    <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars justify-center ">
+    <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars justify-center px-[24px]">
       <section className='flex flex-col items-center justify-center mb-[142px] px-[24px]'>
         {showEarthGeology ? (
         <div className='relative ml-[255px] mr-[195px] w-[173px] h-[173px] overflow-visible'>
@@ -63,7 +63,7 @@ export default function EarthPage() {
         </section>
       </section>
 
-      <section className='flex flex-col gap-[8px]'>
+      <section className='flex flex-col gap-[8px] w-full'>
         <Fact title='Rotation time' fact='0.99 Days' />
         <Fact title='Revolution time' fact='365.26 days' />
         <Fact title='Radius' fact='6,371 km' />
