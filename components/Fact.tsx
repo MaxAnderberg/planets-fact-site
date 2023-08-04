@@ -6,9 +6,9 @@ type Props = {
 
 const Fact = ({title, fact}: Props) => {
 	return (
-		<div className='pl-[23px] py-[20px] border-white border-[1px] lg:w-[255px]'>
+		<div className='flex justify-between items-center px-[24px] py-[9px] border-white border-[1px] lg:w-[255px] w-full'>
 	        <h1 className='uppercase text-[11px] opacity-50'>{title}</h1>
-    	    <h2 className='uppercase text-[35px]'>{fact}</h2>
+    	    <h2 className='uppercase text-[20px]'>{fact}</h2>
       	</div>
 	)	
 }
