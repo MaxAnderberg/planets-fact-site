@@ -9,29 +9,29 @@ export default function EarthPage() {
   const [selectedButton, setSelectedButton] = useState<number>(1);
   const [showEarthGeology, setDisplayGeology] = useState<boolean>(false);
   const [planetText, setPlanetText] = useState<string>('');
+  const [planetImage, setPlanetImage] = useState<string>('/planet-earth.svg');
 
-  let planetImage = "/planet-earth.svg";
 
   useEffect(() => {
     switch(selectedButton) {
       case 1:
         setPlanetText('Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth\'s surface is land with remaining 70.8% is covered with water. Earth\'s distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.');
-        planetImage = '/planet-earth.svg';
+        setPlanetImage('/planet-earth.svg');
         setDisplayGeology(false);
         break;
       case 2:
         setPlanetText("Earth's interior, like that of the other terrestrial planets, is divided into layers by their chemical or physical (rheological) properties. The outer layer is a chemically distinct silicate solid crust, which is underlain by a highly viscous solid mantle.");
-        planetImage = '/planet-earth-internal.svg';
+        setPlanetImage('/planet-earth-internal.svg');
         setDisplayGeology(false);
         break;
       case 3:
       setPlanetText("The total surface area of Earth is about 510 million km2. The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors.");
-        planetImage = '/planet-earth.svg';
+        setPlanetImage('/planet-earth.svg');
         setDisplayGeology(true);
         break;
       default:
         setPlanetText('');
-        planetImage = '/planet-earth.svg';
+        setPlanetImage('/planet-earth.svg');
         setDisplayGeology(false);
     }
   }, [selectedButton])
@@ -46,7 +46,7 @@ export default function EarthPage() {
         </div>
         ) : (
         <Image src={planetImage} width='450' height='450' className='ml-[255px] mr-[195px]' alt='image of a cartoony earth'/>
-        )}  
+        )}
         <section className='flex flex-col justify-between'>
           <h1 className="text-5xl font-bold mb-[23px] font-[Antonio] uppercase">Earth</h1>
           <div className="z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex h-full flex-col mb-[24px] font-[spartan] leading-6">
