@@ -48,7 +48,7 @@ export default function EarthPage() {
         <Image src={planetImage} width='450' height='450' className='ml-[255px] mr-[195px]' alt='image of a cartoony earth'/>
         )}  
         <section className='flex flex-col justify-between'>
-          <h1 className="text-5xl font-bold mb-[23px] font-[antonio] uppercase">Earth</h1>
+          <h1 className="text-5xl font-bold mb-[23px] font-[Antonio] uppercase">Earth</h1>
           <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex h-full flex-col mb-[24px]">
             {planetText}
           </div>
