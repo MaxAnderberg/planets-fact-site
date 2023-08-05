@@ -38,7 +38,7 @@ export default function EarthPage() {
 
   return (
     <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars justify-center px-[24px]">
-      <section className='flex flex-col items-center justify-center mb-[142px] px-[24px]'>
+      <section className='flex flex-col items-center justify-center px-[24px]'>
         {showEarthGeology ? (
         <div className='relative ml-[255px] mr-[195px] w-[173px] h-[173px] overflow-visible'>
           <Image src={planetImage} layout="fill" objectFit="cover" className='absolute bottom-0 w-[173px]' alt='image of a cartoony earth'/>
