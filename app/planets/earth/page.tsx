@@ -11,7 +11,6 @@ export default function EarthPage() {
   const [planetText, setPlanetText] = useState<string>('');
   const [planetImage, setPlanetImage] = useState<string>('/planet-earth.svg');
 
-
   useEffect(() => {
     switch (selectedButton) {
       case 1:
