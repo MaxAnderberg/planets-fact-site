@@ -37,7 +37,7 @@ export default function EarthPage() {
   }, [selectedButton])
 
   return (
-    <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars justify-center">
+    <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars">
       <section className='flex flex-col md:flex-col-reverse items-center justify-center '>
         <div className='flex justify-center gap-[16px] border-b w-full'>
           <InfoSwitchButton section='01' title='overview' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={1} />
