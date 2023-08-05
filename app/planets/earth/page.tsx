@@ -60,9 +60,7 @@ export default function EarthPage() {
           <div className='mb-[39px] font-spartan flex'>
             <p className='opacity-50'>source :&nbsp;</p><Link href='www.google.se' className='underline font-bold text-[#838391]'>Wikipedia</Link>
           </div>
-
         </div>
-
       </section>
 
       <section className='flex flex-col gap-[8px] w-full'>
