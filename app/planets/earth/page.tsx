@@ -39,12 +39,12 @@ export default function EarthPage() {
   return (
     <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars">
       <section className='flex flex-col md:flex-col-reverse items-center justify-center '>
-        <div className='flex justify-center gap-[16px] border-y mt-[10px] w-full py-[20px]'>
+        <div className='flex justify-center gap-[16px] border-y mt-[10px] w-full pt-[20px] mb-[64px]'>
           <InfoSwitchButton section='01' title='overview' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={1} />
           <InfoSwitchButton section='02' title='internal structure' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={2} />
           <InfoSwitchButton section='03' title='surface geology' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={3} />
         </div>
-        <div className='px-[24px]'>
+        <div className='px-[24px] flex items-center flex-col '>
           {showEarthGeology ? (
             <div className='relative ml-[255px] mr-[195px] w-[173px] h-[173px] overflow-visible'>
               <Image src={planetImage} layout="fill" objectFit="cover" className='absolute bottom-0 w-[173px]' alt='image of a cartoony earth' />
