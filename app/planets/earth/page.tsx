@@ -10,6 +10,7 @@ export default function EarthPage() {
   const [showEarthGeology, setDisplayGeology] = useState<boolean>(false);
   const [planetText, setPlanetText] = useState<string>('');
   const [planetImage, setPlanetImage] = useState<string>('/planet-earth.svg');
+  const [planetWikipedia, setPlanetWikipedia] = useState<string>('https://en.wikipedia.org/wiki/Earth');
 
   useEffect(() => {
     switch (selectedButton) {
@@ -17,21 +18,25 @@ export default function EarthPage() {
         setPlanetText('Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth\'s surface is land with remaining 70.8% is covered with water. Earth\'s distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.');
         setPlanetImage('/planet-earth.svg');
         setDisplayGeology(false);
+        setPlanetWikipedia('https://en.wikipedia.org/wiki/Earth')
         break;
       case 2:
         setPlanetText("Earth's interior, like that of the other terrestrial planets, is divided into layers by their chemical or physical (rheological) properties. The outer layer is a chemically distinct silicate solid crust, which is underlain by a highly viscous solid mantle.");
         setPlanetImage('/planet-earth-internal.svg');
         setDisplayGeology(false);
+        setPlanetWikipedia('https://en.wikipedia.org/wiki/Earth#Internal_structure')
         break;
       case 3:
         setPlanetText("The total surface area of Earth is about 510 million km2. The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors.");
         setPlanetImage('/planet-earth.svg');
         setDisplayGeology(true);
+        setPlanetWikipedia('https://en.wikipedia.org/wiki/Earth#Surface')
         break;
       default:
         setPlanetText('');
         setPlanetImage('/planet-earth.svg');
         setDisplayGeology(false);
+        setPlanetWikipedia('https://en.wikipedia.org/wiki/Earth')
     }
   }, [selectedButton])
 
@@ -57,7 +62,7 @@ export default function EarthPage() {
             {planetText}
           </div>
           <div className='mb-[39px] font-spartan flex'>
-            <p className='opacity-50'>source :&nbsp;</p><Link href='www.google.se' className='underline font-bold text-[#838391]'>Wikipedia</Link>
+            <p className='opacity-50'>source :&nbsp;</p><Link href={planetWikipedia} className='underline font-bold text-[#838391]'>Wikipedia</Link>
           </div>
         </div>
       </section>
