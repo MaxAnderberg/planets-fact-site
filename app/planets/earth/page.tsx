@@ -47,7 +47,7 @@ export default function EarthPage() {
           {showEarthGeology ? (
             <div className='relative ml-[255px] mr-[195px] w-[173px] h-[173px] overflow-visible'>
               <Image src={planetImage} layout="fill" objectFit="cover" className='absolute bottom-0 w-[173px]' alt='image of a cartoony earth' />
-              <Image src='/geology-earth.png' width='168' height='199' objectFit="cover" className='absolute ml-[32%] mt-[300px]' alt='image of a cartoony earth' />
+              <Image src='/geology-earth.png' width='168' height='199' objectFit="cover" className='absolute md:ml-[32%] md:mt-[300px] h-[100px] w-[84px] ml-[26%] mt-[120px]' alt="image of earth's surface" />
             </div>
           ) : (
             <Image src={planetImage} width='450' height='450' className='w-[173px]' alt='image of a cartoony earth' />
