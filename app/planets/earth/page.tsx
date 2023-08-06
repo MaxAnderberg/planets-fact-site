@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Fact from '@/components/Fact';
 import { InfoSwitchButton } from '@/components/InfoSwitchButton';
+import RootLayout from '@/app/layout';
 
 export default function EarthPage() {
   const [selectedButton, setSelectedButton] = useState<number>(1);
@@ -41,38 +42,40 @@ export default function EarthPage() {
   }, [selectedButton])
 
   return (
-    <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars">
-      <section className='flex flex-col md:flex-col-reverse items-center justify-center '>
-        <div className='flex justify-center gap-[16px] border-y mt-[10px] w-full pt-[20px] mb-[64px]'>
-          <InfoSwitchButton section='01' title='overview' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={1} />
-          <InfoSwitchButton section='02' title='internal structure' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={2} />
-          <InfoSwitchButton section='03' title='surface geology' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={3} />
-        </div>
-        <div className='px-[24px] flex items-center flex-col'>
-          {showEarthGeology ? (
+    <RootLayout>
+      <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars">
+        <section className='flex flex-col md:flex-col-reverse items-center justify-center '>
+          <div className='flex justify-center gap-[16px] border-y mt-[10px] w-full pt-[20px] mb-[64px]'>
+            <InfoSwitchButton section='01' title='overview' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={1} />
+            <InfoSwitchButton section='02' title='internal structure' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={2} />
+            <InfoSwitchButton section='03' title='surface geology' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={3} />
+          </div>
+          <div className='px-[24px] flex items-center flex-col'>
+            {showEarthGeology ? (
               <div className='relative w-[173px] h-[173px] overflow-visible m-auto flex justify-center items-center'>
-              <Image src={planetImage} layout="fill" objectFit="cover" className='w-[173px]' alt='image of a cartoony earth' />
-              <Image src='/geology-earth.png' width='168' height='199' objectFit="cover" className='absolute md:ml-[32%] md:mt-[300px] h-[100px] w-[84px] mt-[150px]' alt="image of earth's surface" />
+                <Image src={planetImage} layout="fill" objectFit="cover" className='w-[173px]' alt='image of a cartoony earth' />
+                <Image src='/geology-earth.png' width='168' height='199' objectFit="cover" className='absolute md:ml-[32%] md:mt-[300px] h-[100px] w-[84px] mt-[150px]' alt="image of earth's surface" />
+              </div>
+            ) : (
+              <Image src={planetImage} width='450' height='450' className='w-[173px]' alt='image of a cartoony earth' />
+            )}
+            <h1 className="text-5xl font-bold mb-[16px] text-[40px] font-antonio uppercase text-center mt-[67px]">Earth</h1>
+            <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center lg:flex h-full flex-col mb-[24px] font-[spartan] leading-6">
+              {planetText}
             </div>
-          ) : (
-            <Image src={planetImage} width='450' height='450' className='w-[173px]' alt='image of a cartoony earth' />
-          )}
-          <h1 className="text-5xl font-bold mb-[16px] text-[40px] font-[Antonio] uppercase text-center mt-[67px]">Earth</h1>
-          <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center lg:flex h-full flex-col mb-[24px] font-[spartan] leading-6">
-            {planetText}
+            <div className='mb-[39px] font-spartan flex'>
+              <p className='opacity-50'>source :&nbsp;</p><Link href={planetWikipedia} className='underline font-bold text-[#838391]'>Wikipedia</Link>
+            </div>
           </div>
-          <div className='mb-[39px] font-spartan flex'>
-            <p className='opacity-50'>source :&nbsp;</p><Link href={planetWikipedia} className='underline font-bold text-[#838391]'>Wikipedia</Link>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section className='flex flex-col gap-[8px] w-full px-[24px]'>
-        <Fact title='Rotation time' fact='0.99 Days' />
-        <Fact title='Revolution time' fact='365.26 days' />
-        <Fact title='Radius' fact='6,371 km' />
-        <Fact title='AVERAGE TEMP.' fact='16°c' />
-      </section>
-    </main>
+        <section className='flex flex-col gap-[8px] w-full px-[24px]'>
+          <Fact title='Rotation time' fact='0.99 Days' />
+          <Fact title='Revolution time' fact='365.26 days' />
+          <Fact title='Radius' fact='6,371 km' />
+          <Fact title='AVERAGE TEMP.' fact='16°c' />
+        </section>
+      </main>
+    </RootLayout>
   )
 }
