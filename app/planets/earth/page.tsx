@@ -43,7 +43,7 @@ export default function EarthPage() {
           <InfoSwitchButton section='02' title='internal structure' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={2} />
           <InfoSwitchButton section='03' title='surface geology' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={3} />
         </div>
-        <div className='px-[24px] flex items-center flex-col '>
+        <div className='px-[24px] flex items-center flex-col'>
           {showEarthGeology ? (
             <div className='relative ml-[255px] mr-[195px] w-[173px] h-[173px] overflow-visible'>
               <Image src={planetImage} layout="fill" objectFit="cover" className='absolute bottom-0 w-[173px]' alt='image of a cartoony earth' />
@@ -62,7 +62,7 @@ export default function EarthPage() {
         </div>
       </section>
 
-      <section className='flex flex-col gap-[8px] w-full'>
+      <section className='flex flex-col gap-[8px] w-full px-[24px]'>
         <Fact title='Rotation time' fact='0.99 Days' />
         <Fact title='Revolution time' fact='365.26 days' />
         <Fact title='Radius' fact='6,371 km' />
