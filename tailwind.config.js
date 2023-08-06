@@ -10,7 +10,11 @@ module.exports = {
       backgroundImage: {
         'stars': "url('/stars.svg')",
       },
+      fontFamily: {
+        'spartan': ['Spartan', 'sans-serif'],
+        'antonio': ['Antonio', 'sans-serif'],
+      },
     },
-  },
-  plugins: [],
+    plugins: [],
+  }
 }
