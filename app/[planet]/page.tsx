@@ -9,34 +9,36 @@ import { planetsData } from '../data/planets';
 
 export default function PlanetPage( {params}: {params : {planet: string}} ) {
 
-  const planetSomething = planetsData.find(planet => planet.name.toLowerCase() === params.planet.toLowerCase())
-  console.log(planetSomething)
+  const planet = planetsData.find(planet => planet.name.toLowerCase() === params.planet.toLowerCase())
+  console.log(planet)
 
   const [selectedButton, setSelectedButton] = useState<number>(1);
   const [showEarthGeology, setDisplayGeology] = useState<boolean>(false);
   const [planetText, setPlanetText] = useState<string | undefined>('');
-  const [planetImage, setPlanetImage] = useState<string>('/planet-earth.svg');
-  const [planetWikipedia, setPlanetWikipedia] = useState<string>('https://en.wikipedia.org/wiki/Earth');
+  const [planetImage, setPlanetImage] = useState<string | undefined>('/planet-earth.svg');
+  const [geologyImage, setGeologyImage] = useState<string | undefined>('/planet-earth.svg');
+  const [planetWikipedia, setPlanetWikipedia] = useState<string | undefined>('https://en.wikipedia.org/wiki/Earth');
 
   useEffect(() => {
     switch (selectedButton) {
       case 1:
-        setPlanetText(planetSomething?.overview.content);
-        setPlanetImage('/planet-earth.svg');
+        setPlanetText(planet?.overview.content);
+        setPlanetImage(planet?.images.planet);
         setDisplayGeology(false);
-        setPlanetWikipedia('https://en.wikipedia.org/wiki/Earth')
+        setPlanetWikipedia(planet?.overview.source)
         break;
       case 2:
-        setPlanetText("Earth's interior, like that of the other terrestrial planets, is divided into layers by their chemical or physical (rheological) properties. The outer layer is a chemically distinct silicate solid crust, which is underlain by a highly viscous solid mantle.");
-        setPlanetImage('/planet-earth-internal.svg');
+        setPlanetText(planet?.structure.content);
+        setPlanetImage(planet?.images.internal);
         setDisplayGeology(false);
-        setPlanetWikipedia('https://en.wikipedia.org/wiki/Earth#Internal_structure')
+        setPlanetWikipedia(planet?.structure.source)
         break;
       case 3:
-        setPlanetText("The total surface area of Earth is about 510 million km2. The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors.");
-        setPlanetImage('/planet-earth.svg');
+        setPlanetText(planet?.geology.content);
+        setPlanetImage(planet?.images.planet);
         setDisplayGeology(true);
-        setPlanetWikipedia('https://en.wikipedia.org/wiki/Earth#Surface')
+        setGeologyImage(planet?.images.geology);
+        setPlanetWikipedia(planet?.geology.source)
         break;
       default:  
         setPlanetText('');
@@ -59,7 +61,7 @@ export default function PlanetPage( {params}: {params : {planet: string}} ) {
             {showEarthGeology ? (
               <div className='relative w-[173px] h-[173px] overflow-visible m-auto flex justify-center items-center'>
                 <Image src={planetImage} layout="fill" objectFit="cover" className='w-[173px]' alt='image of a cartoony earth' />
-                <Image src='/geology-earth.png' width='168' height='199' objectFit="cover" className='absolute md:ml-[32%] md:mt-[300px] h-[100px] w-[84px] mt-[150px]' alt="image of earth's surface" />
+                <Image src={geologyImage} width='168' height='199' objectFit="cover" className='absolute md:ml-[32%] md:mt-[300px] h-[100px] w-[84px] mt-[150px]' alt="image of earth's surface" />
               </div>
             ) : (
               <Image src={planetImage} width='450' height='450' className='w-[173px]' alt='image of a cartoony earth' />
