@@ -1,6 +1,6 @@
 type Props = {
 	title: string
-	fact: string
+	fact: string | undefined
 }
 
 const Fact = ({ title, fact }: Props) => {
