@@ -9,7 +9,28 @@ import { planetsData } from '../data/planets';
 
 export default function PlanetPage( {params}: {params : {planet: string}} ) {
 
-  const planet = planetsData.find(planet => planet.name.toLowerCase() === params.planet.toLowerCase())
+  type PlanetType = {
+    name: string;
+    overview: {
+      content: string;
+      source: string;
+    };
+    structure: {
+      content: string;
+      source: string;
+    };
+    geology: {
+      content: string;
+      source: string;
+    };
+    rotation: string;
+    revolution: string;
+    radius: string;
+    temperature: string;
+    images: { planet: string; internal: string; geology: string; };
+  };
+
+  const planet : PlanetType | undefined = planetsData.find(planet => planet.name.toLowerCase() === params.planet.toLowerCase())
 
   const [selectedButton, setSelectedButton] = useState<number>(1);
   const [showEarthGeology, setDisplayGeology] = useState<boolean>(false);
