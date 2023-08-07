@@ -10,7 +10,6 @@ import { planetsData } from '../data/planets';
 export default function PlanetPage( {params}: {params : {planet: string}} ) {
 
   const planet = planetsData.find(planet => planet.name.toLowerCase() === params.planet.toLowerCase())
-  console.log(planet)
 
   const [selectedButton, setSelectedButton] = useState<number>(1);
   const [showEarthGeology, setDisplayGeology] = useState<boolean>(false);
@@ -66,7 +65,7 @@ export default function PlanetPage( {params}: {params : {planet: string}} ) {
             ) : (
               <Image src={planetImage} width='450' height='450' className='w-[173px]' alt='image of a cartoony earth' />
             )}
-            <h1 className="text-5xl font-bold mb-[16px] text-[40px] font-antonio uppercase text-center mt-[67px]">Earth</h1>
+            <h1 className="text-5xl font-bold mb-[16px] text-[40px] font-antonio uppercase text-center mt-[67px]">{params.planet}</h1>
             <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center lg:flex h-full flex-col mb-[24px] font-spartan leading-6">
               {planetText}
             </div>
@@ -77,10 +76,10 @@ export default function PlanetPage( {params}: {params : {planet: string}} ) {
         </section>
 
         <section className='flex flex-col gap-[8px] w-full px-[24px]'>
-          <Fact title='Rotation time' fact='0.99 Days' />
-          <Fact title='Revolution time' fact='365.26 days' />
-          <Fact title='Radius' fact='6,371 km' />
-          <Fact title='AVERAGE TEMP.' fact='16°c' />
+          <Fact title='Rotation time' fact={planet?.rotation} />
+          <Fact title='Revolution time' fact={planet?.revolution} />
+          <Fact title='Radius' fact={planet?.radius} />
+          <Fact title='AVERAGE TEMP.' fact={planet?.temperature} />
         </section>
       </main>
     </RootLayout>
