@@ -5,18 +5,23 @@ import Image from 'next/image';
 import Fact from '@/components/Fact';
 import { InfoSwitchButton } from '@/components/InfoSwitchButton';
 import RootLayout from '@/app/layout';
+import { planetsData } from '../data/planets';
 
-export default function EarthPage() {
+export default function PlanetPage( {params}: {params : {planet: string}} ) {
+
+  const planetSomething = planetsData.find(planet => planet.name.toLowerCase() === params.planet.toLowerCase())
+  console.log(planetSomething)
+
   const [selectedButton, setSelectedButton] = useState<number>(1);
   const [showEarthGeology, setDisplayGeology] = useState<boolean>(false);
-  const [planetText, setPlanetText] = useState<string>('');
+  const [planetText, setPlanetText] = useState<string | undefined>('');
   const [planetImage, setPlanetImage] = useState<string>('/planet-earth.svg');
   const [planetWikipedia, setPlanetWikipedia] = useState<string>('https://en.wikipedia.org/wiki/Earth');
 
   useEffect(() => {
     switch (selectedButton) {
       case 1:
-        setPlanetText('Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth\'s surface is land with remaining 70.8% is covered with water. Earth\'s distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.');
+        setPlanetText(planetSomething?.overview.content);
         setPlanetImage('/planet-earth.svg');
         setDisplayGeology(false);
         setPlanetWikipedia('https://en.wikipedia.org/wiki/Earth')
