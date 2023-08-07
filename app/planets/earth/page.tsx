@@ -33,7 +33,7 @@ export default function EarthPage() {
         setDisplayGeology(true);
         setPlanetWikipedia('https://en.wikipedia.org/wiki/Earth#Surface')
         break;
-      default:
+      default:  
         setPlanetText('');
         setPlanetImage('/planet-earth.svg');
         setDisplayGeology(false);
@@ -60,7 +60,7 @@ export default function EarthPage() {
               <Image src={planetImage} width='450' height='450' className='w-[173px]' alt='image of a cartoony earth' />
             )}
             <h1 className="text-5xl font-bold mb-[16px] text-[40px] font-antonio uppercase text-center mt-[67px]">Earth</h1>
-            <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center lg:flex h-full flex-col mb-[24px] font-[spartan] leading-6">
+            <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center lg:flex h-full flex-col mb-[24px] font-spartan leading-6">
               {planetText}
             </div>
             <div className='mb-[39px] font-spartan flex'>
