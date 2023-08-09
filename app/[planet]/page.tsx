@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Fact from '@/components/Fact';
 import { InfoSwitchButton } from '@/components/InfoSwitchButton';
-import RootLayout from '@/app/layout';
 import { planetsData } from '../data/planets';
 
 export default function PlanetPage( {params}: {params : {planet: string}} ) {
@@ -69,7 +68,6 @@ export default function PlanetPage( {params}: {params : {planet: string}} ) {
   }, [selectedButton])
 
   return (
-    <RootLayout>
       <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars">
         <section className='flex flex-col md:flex-col-reverse items-center justify-center '>
           <div className='flex justify-center gap-[16px] border-y mt-[10px] w-full pt-[20px] mb-[64px]'>
@@ -103,6 +101,5 @@ export default function PlanetPage( {params}: {params : {planet: string}} ) {
           <Fact title='AVERAGE TEMP.' fact={planet?.temperature} />
         </section>
       </main>
-    </RootLayout>
   )
 }
