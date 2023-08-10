@@ -30,7 +30,7 @@ const Navbar = () => {
               <li key={planet.name} className='border-b w-full border-opacity-10 py-[20px] flex justify-between'>
                 <div className='flex'>                  
                   <div className={`border rounded-full w-[20px] h-[20px] mr-[25px]`} style={{background: planet.color, borderColor:planet.color}}></div>
-                  <Link href={`/${planet.name.toLowerCase()}`} className='uppercase font-spartan text-[15px] font-bold tracking-[1.3px]'>
+                  <Link href={`/${planet.name.toLowerCase()}`} className='uppercase font-spartan text-[15px] font-bold tracking-[1.3px]' onClick={handleExpand}>
                     {planet.name}
                   </Link>
                 </div>
