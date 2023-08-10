@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className='bg-[#070724] text-white py-[16px] px-[24px]'>
-      <div className='flex justify-between'>
+      <div className='flex justify-between items-center'>
         <p className='uppercase font-antonio text-[28px]'>
           The planets
         </p>
