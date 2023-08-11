@@ -75,7 +75,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
           <InfoSwitchButton section='02' title='internal structure' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={2} />
           <InfoSwitchButton section='03' title='surface geology' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={3} />
         </div>
-        <div className='px-[24px] flex items-center flex-col'>
+        <div className='px-[24px] flex items-center flex-col md:mt-[90px] '>
           {showEarthGeology ? (
             <div className='relative w-[173px] h-[173px] overflow-visible m-auto flex justify-center items-center'>
               <Image src={planetImage} layout="fill" objectFit="cover" className='w-[173px]' alt='image of a cartoony earth' />
@@ -84,6 +84,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
           ) : (
             <Image src={planetImage} width='450' height='450' className='w-[173px]' alt='image of a cartoony earth' />
           )}
+          <div className='flex md:flex-row'>
           <h1 className="text-5xl font-bold mb-[16px] text-[40px] font-antonio uppercase text-center mt-[67px]">{params.planet}</h1>
           <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center lg:flex h-full flex-col mb-[24px] font-spartan leading-6">
             {planetText}
@@ -91,6 +92,8 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
           <div className='mb-[39px] font-spartan flex'>
             <p className='opacity-50'>source :&nbsp;</p><Link href={planetWikipedia} className='underline font-bold text-[#838391]'>Wikipedia</Link>
           </div>
+          </div>
+          
         </div>
       </section>
 
