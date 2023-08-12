@@ -96,7 +96,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
         </div>
       </section>
 
-      <section className='flex flex-col gap-[8px] w-full px-[24px] md:flex-row md:justify-center'>
+      <section className='flex flex-col gap-[8px] w-full px-[24px] md:flex-row md:justify-between md:px-0'>
         <Fact title='Rotation time' fact={planet?.rotation} />
         <Fact title='Revolution time' fact={planet?.revolution} />
         <Fact title='Radius' fact={planet?.radius} />
