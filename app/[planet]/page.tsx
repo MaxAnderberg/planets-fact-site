@@ -78,11 +78,11 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
         <div className='px-[24px] flex items-center flex-col md:mt-[90px] md:row-start-1 md:row-end-2 col-span-2'>
           {showEarthGeology ? (
             <div className='relative w-[173px] h-[173px] overflow-visible m-auto flex justify-center items-center'>
-              <Image src={planetImage} layout="fill" objectFit="cover" className='w-[173px]' alt='image of a cartoony earth' />
+              <Image src={planetImage} layout="fill" objectFit="cover" className='w-[173px] md:w-[285px]' alt='image of a cartoony earth' />
               <Image src={geologyImage} width='168' height='199' objectFit="cover" className='absolute md:ml-[32%] md:mt-[300px] h-[100px] w-[84px] mt-[150px]' alt="image of earth's surface" />
             </div>
           ) : (
-            <Image src={planetImage} width='450' height='450' className='w-[173px]' alt='image of a cartoony earth' />
+            <Image src={planetImage} width='450' height='450' className='w-[173px] md:w-[285px]' alt='image of a cartoony earth' />
           )}
         </div>
         <div className='md:grid md:row-start-2 md:col-start-1'>
