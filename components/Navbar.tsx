@@ -48,7 +48,7 @@ const Navbar = () => {
             {planetsData.map((planet) => (
               <li key={planet.name} className='w-full border-opacity-10 py-[20px] flex justify-between'>
                 <div className='flex'>
-                  <Link href={`/${planet.name.toLowerCase()}`} className='uppercase font-spartan text-[11px] font-bold tracking-[1.3px]' onClick={handleExpand}>
+                  <Link href={`/${planet.name.toLowerCase()}`} className='uppercase font-spartan text-[11px] font-bold tracking-[1.3px] opacity-75 hover:opacity-100' onClick={handleExpand}>
                     {planet.name}
                   </Link>
                 </div>
