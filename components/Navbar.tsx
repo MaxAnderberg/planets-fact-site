@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-[#070724] text-white py-[16px] px-[24px] md:px-0'>
+    <nav className='bg-[#070724] text-white py-[16px] px-[24px] md:px-0 lg:flex lg:justify-between lg:items-center lg:border-b lg:border-opacity-20 lg:pr-[41px]'>
       <div className='flex justify-between items-center md:flex-col'>
         <p className='uppercase font-antonio text-[28px]'>
           The planets
@@ -42,11 +42,11 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      <div className='md:visible px-0 border-b mt-[19px]'>
-        <div className='flex justify-center'>
+      <div className='md:visible px-0 border-b lg:border-none mt-[19px] lg:mt-0'>
+        <div className='flex justify-center '>
           <ul className='flex gap-[33px]'>
             {planetsData.map((planet) => (
-              <li key={planet.name} className='w-full border-opacity-10 py-[20px] flex justify-between'>
+              <li key={planet.name} className='w-full border-opacity-10 lg:border-none py-[20px] lg:py-0 flex justify-between'>
                 <div className='flex'>
                   <Link href={`/${planet.name.toLowerCase()}`} className='uppercase font-spartan text-[11px] font-bold tracking-[1.3px] opacity-75 hover:opacity-100' onClick={handleExpand}>
                     {planet.name}
