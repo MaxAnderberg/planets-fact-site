@@ -70,7 +70,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
   return (
     <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars">
       <section className='flex flex-col items-center justify-center md:grid md:grid-rows-1 md:grid-cols-2'>
-        <div className='flex justify-center gap-[16px] border-y mt-[10px] w-full pt-[20px] mb-[64px] md:flex-col md:h-[40px] md:row-start-2 md:row-end-3 md:col-start-2'>
+        <div className='flex justify-center gap-[16px] border-y md:border-none mt-[10px] w-full pt-[20px] mb-[64px] md:flex-col md:row-start-2 md:row-end-3 md:col-start-2'>
           <InfoSwitchButton section='01' title='overview' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={1} />
           <InfoSwitchButton section='02' title='internal structure' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={2} />
           <InfoSwitchButton section='03' title='surface geology' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={3} />
@@ -96,7 +96,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
         </div>
       </section>
 
-      <section className='flex flex-col gap-[8px] w-full px-[24px]'>
+      <section className='flex flex-col gap-[8px] w-full px-[24px] md:flex-row md:justify-center'>
         <Fact title='Rotation time' fact={planet?.rotation} />
         <Fact title='Revolution time' fact={planet?.revolution} />
         <Fact title='Radius' fact={planet?.radius} />
