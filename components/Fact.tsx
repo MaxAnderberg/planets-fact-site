@@ -1,5 +1,5 @@
 type Props = {
-  title: string
+  title: string | undefined
   fact: string | undefined
 }
 
