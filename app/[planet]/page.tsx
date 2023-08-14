@@ -66,7 +66,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
         setPlanetWikipedia('https://en.wikipedia.org/wiki/Earth')
     }
   }, [selectedButton])
-  
+
   return (
     <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars md:px-[39px] md:pb-[36px] lg:px-[165px] lg:pb-[56px] ">
       <section>
@@ -87,11 +87,11 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
             )}
           </div>
           <div className='md:grid md:row-start-2 md:col-start-1 lg:col-start-2 lg:row-start-1 lg:flex lg:flex-col lg:items-end'>
-            <h1 className="text-5xl font-bold mb-[16px] md:mb-[24px] text-[40px] font-antonio uppercase text-center md:text-left mt-[67px] lg:mr-[215px]">{params.planet}</h1>
-            <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center md:text-left lg:flex h-full flex-col mb-[24px] lg:mb-0 font-spartan leading-6 lg:w-[350px]">
+            <h1 className="text-5xl font-bold mb-[16px] md:mb-[24px] text-[40px] font-antonio uppercase text-center md:text-left mt-[67px] lg:w-[350px] lg:text-left">{params.planet}</h1>
+            <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center md:text-left lg:flex h-full flex-col mb-[24px] lg:mb-0 font-spartan leading-6 lg:w-[350px] lg:mb-[24px]">
               {planetText}
             </div>
-            <div className='mb-[39px] font-spartan flex lg:mb-0'>
+            <div className='mb-[39px] font-spartan flex lg:mb-0 lg:w-[350px] text-left'>
               <p className='opacity-50'>Source :&nbsp;</p><Link href={planetWikipedia} className='underline font-bold text-[#838391] flex'>Wikipedia <Image className='ml-[4px]' width={12} height={12} src='icon-source.svg' /></Link>
             </div>
           </div>
