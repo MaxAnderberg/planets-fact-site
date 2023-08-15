@@ -13,7 +13,7 @@ module.exports = {
       },
       fontFamily: {
         'spartan': ['Spartan', 'sans-serif'],
-        'antonio': ['Antonio', 'sans-serif'],
+        'antonio': "var(--antonio-font)"
       },
     },
     plugins: [],
