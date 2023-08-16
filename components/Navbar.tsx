@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-[#070724] text-white py-[16px] px-[24px] md:px-0 lg:flex lg:justify-between lg:items-center lg:border-b lg:border-opacity-20 lg:pr-[41px] lg:pl-[32px]'>
+    <nav className='bg-[#070724] text-white py-[16px] px-[24px] md:px-0 lg:flex lg:justify-between lg:items-center lg:border-b border-white border-opacity-20 lg:pr-[41px] lg:pl-[32px]'>
       <div className='flex justify-between items-center md:flex-col'>
         <p className='uppercase font-antonio text-[28px]'>
           The planets
