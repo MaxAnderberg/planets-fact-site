@@ -6,6 +6,7 @@ import Fact from '@/components/Fact';
 import { InfoSwitchButton } from '@/components/InfoSwitchButton';
 import { planetsData } from '../data/planets';
 import { Antonio, League_Spartan } from "next/font/google"
+import LinkIcon from '@/components/LinkIcon';
 
 const antonio = Antonio({ subsets: ['latin'] })
 const spartan = League_Spartan({ subsets: ['latin'] })
@@ -80,7 +81,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
             <InfoSwitchButton section='02' title='internal structure' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={2} />
             <InfoSwitchButton section='03' title='surface geology' selectedButton={selectedButton} setSelectedButton={setSelectedButton} id={3} />
           </div>
-          <div className='px-[24px] flex items-center flex-col md:mt-[90px] md:row-start-1 md:row-end-2 col-span-2 lg:col-start-1 lg:col-end-2 lg:row-span-2 lg:mt-[162px] lg:px-0 lg:justify-end lg:items-end'>
+          <div className='px-[24px] flex items-center flex-col md:mt-[90px] md:row-start-1 md:row-end-2 col-span-2 lg:col-start-1 lg:col-end-2 lg:row-span-2 lg:mt-[137px] lg:px-0 lg:justify-end lg:items-end'>
             {showEarthGeology ? (
               <div className='relative overflow-visible m-auto flex justify-center items-center md:m-0'>
                 <Image src={planetImage} width='450' height='450' className='w-[173px] md:w-[285px] lg:w-[450px]' alt='image of a cartoony earth' />
@@ -91,12 +92,12 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
             )}
           </div>
           <div className='md:grid md:row-start-2 md:col-start-1 lg:col-start-2 lg:row-start-1 lg:flex lg:flex-col lg:items-end'>
-            <h1 className="text-5xl font-bold mb-[16px] md:mb-[24px] text-[40px] font-antonio uppercase text-center md:text-left mt-[67px] lg:w-[350px] lg:text-left lg:text-[80px] lg:mt-[126px]" style={antonio.style}>{params.planet}</h1>
+            <h1 className="text-5xl font-bold mb-[16px] md:mb-[24px] text-[40px] font-antonio uppercase text-center md:text-left mt-[67px] lg:w-[350px] lg:text-left lg:text-[80px] lg:mt-[126px] lg:pb-[10px]" style={antonio.style}>{params.planet}</h1>
             <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center md:text-left lg:flex h-full flex-col mb-[24px] font-spartan leading-6 lg:w-[350px] lg:mb-[24px]" style={spartan.style}>
               {planetText}
             </div>
-            <div className='mb-[39px] font-spartan flex lg:mb-0 lg:w-[350px] text-left'>
-              <p className='opacity-50'>Source :&nbsp;</p><Link href={planetWikipedia} className='underline font-bold text-[#838391] flex'>Wikipedia <Image className='ml-[4px]' width={12} height={12} src='icon-source.svg' /></Link>
+            <div className='mb-[39px] font-spartan flex lg:mb-[39px] lg:w-[350px] text-left'>
+              <p className='opacity-50'>Source :&nbsp;</p><Link href={planetWikipedia} className='underline font-bold text-[#838391] flex'>Wikipedia <LinkIcon width={12} height={12} /></Link>
             </div>
           </div>
         </section>
