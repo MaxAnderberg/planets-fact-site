@@ -23,6 +23,12 @@ export const planetsData = [
       "geology": "/geology-mercury.png"
     },
     "color": "#DEF4FC",
+    "lgHeight": 450,
+    "lgWidth": 450,
+    "mdHeight": 450,
+    "mdWidth": 450,
+    "smHeight": 111,
+    "smWidth": 111,
   },
   {
     "name": "Venus",
@@ -48,6 +54,12 @@ export const planetsData = [
       "geology": "/geology-venus.png"
     },
     "color": "#F7CC7F",
+    "lgHeight": 450,
+    "lgWidth": 450,
+    "mdHeight": 450,
+    "mdWidth": 450,
+    "smHeight": 154,
+    "smWidth": 154,
   },
   {
     "name": "Earth",
@@ -73,6 +85,12 @@ export const planetsData = [
       "geology": "/geology-earth.png"
     },
     "color": "#545BFE",
+    "lgHeight": 450,
+    "lgWidth": 450,
+    "mdHeight": 450,
+    "mdWidth": 450,
+    "smHeight": 173,
+    "smWidth": 173,
   },
   {
     "name": "Mars",
@@ -98,6 +116,12 @@ export const planetsData = [
       "geology": "/geology-mars.png"
     },
     "color": "#FF6A45",
+    "lgHeight": 450,
+    "lgWidth": 450,
+    "mdHeight": 450,
+    "mdWidth": 450,
+    "smHeight": 129,
+    "smWidth": 129,
   },
   {
     "name": "Jupiter",
@@ -123,6 +147,13 @@ export const planetsData = [
       "geology": "/geology-jupiter.png"
     },
     "color": "#ECAD7A",
+    "lgHeight": 450,
+    "lgWidth": 450,
+    "mdHeight": 450,
+    "mdWidth": 450,
+    "smHeight": 224,
+    "smWidth": 224,
+
   },
   {
     "name": "Saturn",
@@ -148,6 +179,12 @@ export const planetsData = [
       "geology": "/geology-saturn.png"
     },
     "color": "#FCCB6B",
+    "lgHeight": 450,
+    "lgWidth": 450,
+    "mdHeight": 450,
+    "mdWidth": 450,
+    "smHeight": 159,
+    "smWidth": 159,
   },
   {
     "name": "Uranus",
@@ -173,6 +210,12 @@ export const planetsData = [
       "geology": "/geology-uranus.png"
     },
     "color": "#65F0D5",
+    "lgHeight": 450,
+    "lgWidth": 450,
+    "mdHeight": 450,
+    "mdWidth": 450,
+    "smHeight": 176,
+    "smWidth": 176,
   },
   {
     "name": "Neptune",
@@ -198,5 +241,12 @@ export const planetsData = [
       "geology": "/geology-neptune.png"
     },
     "color": "#497EFA",
+    "lgHeight": 450,
+    "lgWidth": 450,
+    "mdHeight": 450,
+    "mdWidth": 450,
+    "smHeight": 173,
+    "smWidth": 173,
+
   }
 ]
