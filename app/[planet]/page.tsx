@@ -128,7 +128,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
               {planetText}
             </div>
             <div className='mb-[39px] font-spartan flex lg:mb-[39px] lg:w-[350px] text-left'>
-              <p className='opacity-50'>Source :&nbsp;</p><Link href={planetWikipedia} className='underline font-bold text-[#838391] flex'>Wikipedia <LinkIcon width={12} height={12} /></Link>
+              <p className='opacity-50'>Source :&nbsp;</p><Link href={planetWikipedia} className='underline font-bold text-[#838391] flex gap-[8px]'>Wikipedia <LinkIcon width={12} height={12} /></Link>
             </div>
           </div>
         </section>
