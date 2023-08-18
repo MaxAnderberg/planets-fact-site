@@ -102,7 +102,6 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
     };
   }, []);
 
-  console.log('hello', planet?.lgHeight)
   return (
     <main className="flex flex-col min-h-screen items-center text-white bg-[#070724] bg-gradient-radial h-full bg-stars md:px-[39px] md:pb-[36px] lg:px-[165px] lg:pb-[56px] ">
       <section>
