@@ -40,9 +40,9 @@ type PlanetType = {
 
 
 export default function PlanetPage({ params }: { params: { planet: string } }) {
-  
+
   const planet: PlanetType | undefined = planetsData.find(planet => planet.name.toLowerCase() === params.planet.toLowerCase())
-  
+
   const [width, setWidth] = useState<number>(window.innerWidth)
   const [imageWidth, setImageWidth] = useState<number | undefined>(0);
   const [selectedButton, setSelectedButton] = useState<number>(3);
@@ -85,16 +85,16 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
     const handleResize = () => {
       setWidth(window.innerWidth);
     };
-    
+
     window.addEventListener('resize', handleResize);
-    
+
     if (width > 1200) {
       setImageWidth(planet?.lgWidth);
     } else if (width > 800) {
       setImageWidth(planet?.mdWidth);
     } else {
       setImageWidth(planet?.smWidth);
-    }  
+    }
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -113,11 +113,11 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
           <div className='px-[24px] flex items-center flex-col md:mt-[90px] md:row-start-1 md:row-end-2 col-span-2 lg:col-start-1 lg:col-end-2 lg:row-span-2 lg:mt-[117px] lg:px-0 lg:justify-end lg:items-end'>
             {showEarthGeology ? (
               <div className='relative overflow-visible m-auto flex justify-center items-center md:m-0'>
-                  <Image src={planetImage} width={imageWidth} height={imageWidth} alt='image of a cartoony earth' />
+                <Image src={planetImage} width={imageWidth} height={imageWidth} alt='image of a cartoony earth' />
                 <Image src={geologyImage} width={163} height={199} objectFit="cover" className='absolute md:ml-[32%] md:mt-[300px] h-[100px] w-[84px] mt-[150px] md:mr-[90px] md:h-[123px] md:w-[107px] lg:w-[163px] lg:h-[199px] lg:mr-[125px] lg:mt-[335px]' alt="image of earth's surface" />
               </div>
             ) : (
-                <Image src={planetImage} width={imageWidth} height={imageWidth} alt='image of a cartoony earth' />
+              <Image src={planetImage} width={imageWidth} height={imageWidth} alt='image of a cartoony earth' />
             )}
           </div>
           <div className='md:grid md:row-start-2 md:col-start-1 lg:col-start-2 lg:row-start-1 lg:flex lg:flex-col lg:items-end'>
