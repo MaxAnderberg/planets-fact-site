@@ -122,18 +122,18 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
               <Image src={planetImage} width={imageWidth} height={imageWidth} alt='image of a cartoony earth' />
             )}
           </div>
-          <div className='md:grid md:row-start-2 md:col-start-1 lg:col-start-2 lg:row-start-1 lg:flex lg:flex-col lg:items-end'>
+          <div className='px-[24px] md:px-0 md:grid md:row-start-2 md:col-start-1 lg:col-start-2 lg:row-start-1 lg:flex lg:flex-col lg:items-end'>
             <h1 className="text-5xl font-bold mb-[16px] md:mb-[24px] text-[40px] font-antonio uppercase text-center md:text-left mt-[67px] lg:w-[350px] lg:text-left lg:text-[80px] lg:mt-[126px] lg:pb-[10px]" style={antonio.style}>{params.planet}</h1>
-            <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center md:text-left lg:flex h-full flex-col mb-[24px] font-spartan leading-6 lg:w-[350px] lg:mb-[24px]" style={spartan.style}>
+            <div className="z-10 w-full max-w-5xl items-center justify-between text-sm text-center md:text-left lg:flex h-full flex-col mb-[10px] md:mb-[24px] font-spartan leading-6 lg:w-[350px] lg:mb-[24px]" style={spartan.style}>
               {planetText}
             </div>
-            <div className='mb-[39px] font-spartan flex lg:mb-[39px] lg:w-[350px] text-left'>
+            <div className='mb-[28px] md:mb-[39px] font-spartan flex lg:mb-[39px] lg:w-[350px] text-left'>
               <p className='opacity-50'>Source :&nbsp;</p><Link href={planetWikipedia} className='underline font-bold text-[#838391] flex gap-[8px]'>Wikipedia <LinkIcon width={12} height={12} /></Link>
             </div>
           </div>
         </section>
 
-        <section className='flex flex-col gap-[8px] w-full px-[24px] md:flex-row md:justify-between md:px-0 lg:gap-[30px] lg:justify-normal mt-[87px]' style={antonio.style}>
+        <section className='flex flex-col gap-[8px] w-full px-[24px] md:flex-row md:justify-between md:px-0 lg:gap-[30px] lg:justify-normal lg:mt-[87px]' style={antonio.style}>
           <Fact title='Rotation time' fact={planet?.rotation} />
           <Fact title='Revolution time' fact={planet?.revolution} />
           <Fact title='Radius' fact={planet?.radius} />
