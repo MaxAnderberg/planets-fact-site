@@ -115,7 +115,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
               <div className='relative overflow-visible m-auto flex justify-center items-center md:m-0'>
                 <Image src={planetImage} width={imageWidth} height={imageWidth} alt='image of a cartoony earth' />
                 <div className='absolute flex items-center justify-center inset-0 lg:top-[80%]'>
-                  <Image src={geologyImage} width={163} height={199} alt="image of earth's surface"/>
+                  <Image src={geologyImage} width={163} height={199} alt="image of planets's surface"/>
                 </div>
               </div>
             ) : (
