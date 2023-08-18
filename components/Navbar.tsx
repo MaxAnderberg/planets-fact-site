@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      <div className='md:visible px-0 border-b lg:border-none mt-[19px] lg:mt-0'>
+      <div className='hidden md:flex px-0 border-b lg:border-none mt-[19px] lg:mt-0'>
         <div className='flex justify-center '>
           <ul className='flex gap-[33px]'>
             {planetsData.map((planet) => (
