@@ -114,7 +114,9 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
             {showEarthGeology ? (
               <div className='relative overflow-visible m-auto flex justify-center items-center md:m-0'>
                 <Image src={planetImage} width={imageWidth} height={imageWidth} alt='image of a cartoony earth' />
-                <Image src={geologyImage} width={163} height={199} objectFit="cover" className='absolute md:ml-[32%] md:mt-[300px] h-[100px] w-[84px] mt-[150px] md:mr-[90px] md:h-[123px] md:w-[107px] lg:w-[163px] lg:h-[199px] lg:mr-[125px] lg:mt-[335px]' alt="image of earth's surface" />
+                <div className='absolute flex items-center justify-center inset-0 lg:top-[80%]'>
+                  <Image src={geologyImage} width={163} height={199} alt="image of earth's surface"/>
+                </div>
               </div>
             ) : (
               <Image src={planetImage} width={imageWidth} height={imageWidth} alt='image of a cartoony earth' />
