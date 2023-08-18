@@ -94,8 +94,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
       setImageWidth(planet?.mdWidth);
     } else {
       setImageWidth(planet?.smWidth);
-    }
-  
+    }  
 
     return () => {
       window.removeEventListener('resize', handleResize);
