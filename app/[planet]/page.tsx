@@ -44,7 +44,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
   const planet: PlanetType | undefined = planetsData.find(planet => planet.name.toLowerCase() === params.planet.toLowerCase())
   
   const [width, setWidth] = useState<number>(window.innerWidth)
-  const [imageWidth, setImageWidth] = useState<number>(0);
+  const [imageWidth, setImageWidth] = useState<number | undefined>(0);
   const [selectedButton, setSelectedButton] = useState<number>(3);
   const [showEarthGeology, setDisplayGeology] = useState<boolean>(false);
   const [planetText, setPlanetText] = useState<string | undefined>('');
