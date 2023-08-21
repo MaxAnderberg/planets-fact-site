@@ -38,7 +38,6 @@ type PlanetType = {
   smHeight: number
 };
 
-
 export default function PlanetPage({ params }: { params: { planet: string } }) {
 
   const planet: PlanetType | undefined = planetsData.find(planet => planet.name.toLowerCase() === params.planet.toLowerCase())
