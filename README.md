@@ -1,3 +1,4 @@
+
 # WIP - Planets fact site solution
 
 This is a solution to the [Planets fact site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f).
@@ -27,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/MaxAnderberg/planets-fact-site)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
