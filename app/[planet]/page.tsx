@@ -89,7 +89,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
 
     if (width > 1200) {
       setImageWidth(planet?.lgWidth);
-    } else if (width > 800) {
+    } else if (width > 767) {
       setImageWidth(planet?.mdWidth);
     } else {
       setImageWidth(planet?.smWidth);
