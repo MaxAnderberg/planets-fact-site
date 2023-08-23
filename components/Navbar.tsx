@@ -43,10 +43,10 @@ const Navbar = () => {
         )}
       </div>
       <div className='hidden md:flex px-0 border-b lg:border-none mt-[19px] lg:mt-0'>
-        <div className='flex justify-center '>
-          <ul className='flex gap-[33px]'>
+        <div className='flex justify-center w-full px-[51px] '>
+          <ul className='flex gap-[33px] w-full'>
             {planetsData.map((planet) => (
-              <li key={planet.name} className='w-full border-opacity-10 lg:border-none py-[20px] lg:py-0 flex justify-between'>
+              <li key={planet.name} className='w-full border-opacity-10 lg:border-none py-[20px] lg:py-0 flex justify-center lg:justify-between'>
                 <div className='flex'>
                   <Link href={`/${planet.name.toLowerCase()}`} className='uppercase font-spartan text-[11px] font-bold tracking-[1.3px] opacity-75 hover:opacity-100' onClick={handleExpand}>
                     {planet.name}
