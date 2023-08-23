@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-[#070724] text-white py-[16px] px-[24px] md:px-0 lg:flex lg:justify-between lg:items-center lg:border-b border-white border-opacity-20 lg:pr-[41px] lg:pl-[32px]'>
+    <nav className='bg-[#070724] text-white py-[16px] md:pb-0 px-[24px] md:px-0 lg:flex lg:justify-between lg:items-center lg:border-b border-white border-opacity-25 lg:pr-[41px] lg:pl-[32px]'>
       <div className='flex justify-between items-center md:flex-col'>
         <p className='uppercase font-antonio text-[28px]'>
           The planets
@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      <div className='hidden md:flex px-0 border-b lg:border-none mt-[19px] lg:mt-0'>
+      <div className='hidden md:flex px-0  mt-[19px] lg:mt-0'>
         <div className='flex justify-center w-full px-[51px] '>
           <ul className='flex gap-[33px] w-full'>
             {planetsData.map((planet) => (
