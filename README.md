@@ -14,7 +14,7 @@ This is a solution to the [Planets fact site challenge on Frontend Mentor](https
 - [Author](#author)
 
 ## Overview
-WiP
+
 
 ### The challenge
 
