@@ -15,7 +15,6 @@ This is a solution to the [Planets fact site challenge on Frontend Mentor](https
 
 ## Overview
 
-
 ### The challenge
 
 Users should be able to:
