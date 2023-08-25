@@ -51,35 +51,40 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
   const [planetText, setPlanetText] = useState<string | undefined>('');
   const [planetImage, setPlanetImage] = useState<string | StaticImport>('/planet-earth.svg');
   const [geologyImage, setGeologyImage] = useState<string | StaticImport>('/planet-earth.svg');
-  const [planetWikipedia, setPlanetWikipedia] = useState<SetStateAction<string> | undefined>('https://en.wikipedia.org/wiki/Earth');
+  const [planetWikipedia, setPlanetWikipedia] = useState<URL>();
 
   useEffect(() => {
+    let url;
     switch (selectedButton) {
       case 1:
         setPlanetText(planet?.overview.content);
         setPlanetImage(planet!.images.planet);
         setDisplayGeology(false);
-        setPlanetWikipedia(planet?.overview.source)
+        url = new URL(planet!.overview.source)
+        setPlanetWikipedia(url)
         break;
       case 2:
         setPlanetText(planet?.structure.content);
         setPlanetImage(planet!.images.internal);
         setDisplayGeology(false);
-        setPlanetWikipedia(planet?.structure.source)
-        break;
+            url = new URL(planet!.overview.source)
+            setPlanetWikipedia(url)
+            break;
       case 3:
         setPlanetText(planet?.geology.content);
         setPlanetImage(planet!.images.planet);
         setDisplayGeology(true);
         setGeologyImage(planet!.images.geology);
-        setPlanetWikipedia(planet?.geology.source)
-        break;
+            url = new URL(planet!.overview.source)
+            setPlanetWikipedia(url)
+            break;
       default:
         setPlanetText('');
         setPlanetImage('/planet-earth.svg');
         setDisplayGeology(false);
-        setPlanetWikipedia('https://en.wikipedia.org/wiki/Earth')
-    }
+        url = new URL('https://en.wikipedia.org/wiki/Earth')
+        setPlanetWikipedia(url)
+      }
   }, [selectedButton])
 
   useEffect(() => {
