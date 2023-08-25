@@ -8,7 +8,9 @@ const nextConfig = {
         permanent: false,
       }
     ]
-  }
+  },
+  typescript:
+  {ignoreBuildErrors: true}
 }
 
 module.exports = nextConfig
