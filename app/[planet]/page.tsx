@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react';
+import { SetStateAction, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Fact from '@/components/Fact';
@@ -7,6 +7,8 @@ import { InfoSwitchButton } from '@/components/InfoSwitchButton';
 import { planetsData } from '../data/planets';
 import { Antonio, League_Spartan } from "next/font/google"
 import LinkIcon from '@/components/LinkIcon';
+import { Url } from 'url';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 const antonio = Antonio({ subsets: ['latin'] })
 const spartan = League_Spartan({ subsets: ['latin'] })
@@ -47,29 +49,29 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
   const [selectedButton, setSelectedButton] = useState<number>(3);
   const [showEarthGeology, setDisplayGeology] = useState<boolean>(false);
   const [planetText, setPlanetText] = useState<string | undefined>('');
-  const [planetImage, setPlanetImage] = useState<string | undefined>('/planet-earth.svg');
-  const [geologyImage, setGeologyImage] = useState<string | undefined>('/planet-earth.svg');
-  const [planetWikipedia, setPlanetWikipedia] = useState<string | undefined>('https://en.wikipedia.org/wiki/Earth');
+  const [planetImage, setPlanetImage] = useState<string | StaticImport>('/planet-earth.svg');
+  const [geologyImage, setGeologyImage] = useState<string | StaticImport>('/planet-earth.svg');
+  const [planetWikipedia, setPlanetWikipedia] = useState<SetStateAction<string> | undefined>('https://en.wikipedia.org/wiki/Earth');
 
   useEffect(() => {
     switch (selectedButton) {
       case 1:
         setPlanetText(planet?.overview.content);
-        setPlanetImage(planet?.images.planet);
+        setPlanetImage(planet!.images.planet);
         setDisplayGeology(false);
         setPlanetWikipedia(planet?.overview.source)
         break;
       case 2:
         setPlanetText(planet?.structure.content);
-        setPlanetImage(planet?.images.internal);
+        setPlanetImage(planet!.images.internal);
         setDisplayGeology(false);
         setPlanetWikipedia(planet?.structure.source)
         break;
       case 3:
         setPlanetText(planet?.geology.content);
-        setPlanetImage(planet?.images.planet);
+        setPlanetImage(planet!.images.planet);
         setDisplayGeology(true);
-        setGeologyImage(planet?.images.geology);
+        setGeologyImage(planet!.images.geology);
         setPlanetWikipedia(planet?.geology.source)
         break;
       default:
@@ -113,7 +115,7 @@ export default function PlanetPage({ params }: { params: { planet: string } }) {
                         {showEarthGeology ? (
                             <div className='relative overflow-visible m-auto flex justify-center items-center md:m-0'>
                                 <Image src={planetImage} width={imageWidth} height={imageWidth} alt='image of a cartoony earth' />
-                                <div className='absolute flex items-center justify-center inset-0 m-auto top-[80%] lg:top-[80%] w-[50%] md:w-[107px] lg:w-[163px]'>
+                                <div className='absolute flex items-center justify-center inset-0 m-auto top-[80%] lg:top-[80%] w-[50%] md:w-[107px] lg:w-[163px]'>c
                                     <Image src={geologyImage} width={163} height={199} alt="image of planets's surface" />
                                 </div>
                             </div>
