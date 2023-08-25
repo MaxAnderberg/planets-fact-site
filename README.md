@@ -25,6 +25,8 @@ Users should be able to:
 
 ### Screenshot
 
+TODO: Add screenshots for mobile, tablet, and desktop
+
 ### Links
 
 - Solution URL: [Github](https://github.com/MaxAnderberg/planets-fact-site)
